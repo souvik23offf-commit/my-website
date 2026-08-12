@@ -1,0 +1,98 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.html"
+    <title>My Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Start Page */
+        #start-page {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #111;
+        }
+
+        .start-btn {
+            padding: 18px 55px;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            background: transparent;
+            border: 2px solid white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .start-btn:hover {
+            background: white;
+            color: #111;
+            transform: scale(1.05);
+        }
+
+        /* Main Page */
+        #main-page {
+            display: none;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- FIRST PAGE -->
+    <section id="start-page">
+        <button class="start-btn" onclick="enterWebsite()">
+            START
+        </button>
+    </section>
+
+
+    <!-- MAIN PORTFOLIO PAGE -->
+    <section id="main-page">
+
+        <h1>Welcome to My Portfolio</h1>
+
+        <h2>Software Developer | Metallurgy Engineer | Teacher</h2>
+
+        <p>
+            Welcome to my personal portfolio website.
+        </p>
+
+        <!-- Add your complete main website here -->
+
+    </section>
+
+
+    <script>
+        function enterWebsite() {
+
+            // Hide Start Page
+            document.getElementById("start-page").style.display = "none";
+
+            // Show Main Page
+            document.getElementById("main-page").style.display = "block";
+
+            // Move to the top of main page
+            window.scrollTo(0, 0);
+        }
+    </script>
+
+</body>
+</html>
+```

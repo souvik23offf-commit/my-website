@@ -1,0 +1,352 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+.title-content {
+    display: flex;
+    align-items: center;      /* vertically centers photo and text */
+    gap: 20px;                /* space between photo and name */
+    scroll-behavior: auto;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 30px;
+    border-radius: 20%;
+    object-fit: cover;
+    border: 3px solid #fff;   /* optional */
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    flex-shrink: 0;           /* prevents the image from shrinking */
+}
+
+.title-text h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.title-text p {
+    margin: 7px 0 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f7f7;
+    color: #222;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+/* =========================
+   HEADER / COMMON SECTION
+========================= */
+
+header {
+    width: 100%;
+    padding: 30px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0c0c0c;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    color: white;
+    font-size: 20px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: rgb(rgb(215, 196, 196), green, blue);
+    background-color: linear-gradient(90deg, #00d4ff, #0077b5);
+    -webkit-background-clip: text;
+    text-decoration: aqua;
+    font-size: 25px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff6b35;
+}
+
+
+/* =========================
+   ALL THREE MAIN SECTIONS
+========================= */
+
+#developer,
+#engineer,
+#teacher {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 0 60px;
+    
+}
+
+#developer .container,
+#engineer .container,
+#teacher .container {
+    padding: 50px;
+    border-radius: 20px;
+    
+}
+
+
+/* =========================
+   DEVELOPER
+========================= */
+
+#developer {
+    background: linear-gradient(
+        135deg,
+        #111827,
+        #1e3a8a
+    );
+    color: white;
+}
+
+#developer .container {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+#developer h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+#developer p {
+    max-width: 700px;
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   ENGINEER
+========================= */
+
+#engineer {
+    background: linear-gradient(
+        135deg,
+        #3b1d0b,
+        #c2410c
+    );
+    color: white;
+}
+
+#engineer .container {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#engineer h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+#engineer p {
+    max-width: 700px;
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   TEACHER
+========================= */
+
+#teacher {
+    background: linear-gradient(
+        135deg,
+        #12b458,
+        #047857
+    );
+    color: white;
+}
+
+#teacher .container {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#teacher h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+#teacher p {
+    max-width: 700px;
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.cta {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 30px;
+    border: 2px solid white;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.cta:hover {
+    background: white;
+    color: #111;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+#about {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    background: rgb(72, 207, 234);
+    padding: 100px 0;
+}
+
+#about h2 {
+    font-size: 50px;
+    margin-bottom: 25px;
+}
+
+#about p {
+    max-width: 800px;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+#contact {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    background: #111;
+    color: white;
+    padding: 100px 0;
+}
+
+#contact h2 {
+    font-size: 50px;
+    margin-bottom: 25px;
+}
+
+#contact p {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media screen and (max-width: 768px) {
+
+    header {
+        padding: 15px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    #developer h2,
+    #engineer h2,
+    #teacher h2 {
+        font-size: 42px;
+    }
+
+    #developer p,
+    #engineer p,
+    #teacher p {
+        font-size: 17px;
+    }
+
+    #developer .container,
+    #engineer .container,
+    #teacher .container {
+        padding: 30px;
+    }
+
+    #about h2,
+    #contact h2 {
+        font-size: 40px;
+    }
+}
+/* =========================
+   JAVASCRIPT ANIMATIONS
+========================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Active navigation */
+
+nav a.active {
+    color: #ff6b35;
+    font-weight: bold;
+}
+
+
+/* Button animation */
+
+.cta {
+    transition: all 0.3s ease;
+}
+
+.cta:hover {
+    transform: translateY(-4px) scale(1.03);
+}
